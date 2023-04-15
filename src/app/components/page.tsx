@@ -1,7 +1,7 @@
 import Button, { ButtonVariant } from "@/components/Button";
 import RefreshIcon from "@/components/Icons/Refresh";
-import Input from "@/components/Input";
-import Textarea from "@/components/Textarea";
+import Input from "@/components/TextField/Input";
+import Textarea from "@/components/TextField/Textarea";
 
 export default function Home() {
   return (
@@ -83,27 +83,25 @@ export default function Home() {
         </section>
         <section className="grid gap-2">
           <div className="flex space-x-2 w-full">
-            <Button variant={ButtonVariant.darkOutlined}>
-              Попробовать снова
-            </Button>
-            <Button variant={ButtonVariant.darkOutlined} disabled>
+            <Button variant={ButtonVariant.outlined}>Попробовать снова</Button>
+            <Button variant={ButtonVariant.outlined} disabled>
               Попробовать снова
             </Button>
 
-            <Button variant={ButtonVariant.darkOutlined} loading={true}>
+            <Button variant={ButtonVariant.outlined} loading={true}>
               Попробовать снова
             </Button>
           </div>
 
           <div className="flex space-x-2 w-full ">
             <Button
-              variant={ButtonVariant.darkOutlined}
+              variant={ButtonVariant.outlined}
               icon={<RefreshIcon className="w-6 h-6 inline stroke-current" />}
             >
               Попробовать снова
             </Button>
             <Button
-              variant={ButtonVariant.darkOutlined}
+              variant={ButtonVariant.outlined}
               disabled
               icon={<RefreshIcon className="w-6 h-6 inline stroke-current" />}
             >
@@ -111,7 +109,7 @@ export default function Home() {
             </Button>
 
             <Button
-              variant={ButtonVariant.darkOutlined}
+              variant={ButtonVariant.outlined}
               loading={true}
               icon={<RefreshIcon className="w-6 h-6 inline stroke-current" />}
             >
@@ -141,12 +139,12 @@ export default function Home() {
               icon={<RefreshIcon className="w-6 h-6 inline stroke-current" />}
             />
             <Button
-              variant={ButtonVariant.darkOutlined}
+              variant={ButtonVariant.outlined}
               icon={<RefreshIcon className="w-6 h-6 inline stroke-current" />}
             />
             <Button
               disabled
-              variant={ButtonVariant.darkOutlined}
+              variant={ButtonVariant.outlined}
               icon={<RefreshIcon className="w-6 h-6 inline stroke-current" />}
             />
           </div>

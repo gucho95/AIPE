@@ -9,6 +9,7 @@ import {
 import clsx from "clsx";
 import Button, { ButtonSize, ButtonVariant } from "../Button";
 import CloseIcon from "../Icons/Close";
+import classes from "./style.module.css";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: string;
@@ -34,9 +35,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     };
 
     return (
-      <div className="relative flex flex-col">
+      <div className={classes.fieldWrapper}>
         {labelText ? (
-          <label htmlFor={props.name} className="pb-3 text-2xl">
+          <label htmlFor={props.name} className={classes.fieldLabel}>
             {labelText}
           </label>
         ) : null}
@@ -51,36 +52,32 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             inputRef.current = e;
           }}
           className={clsx(
-            "outline-none ring-2 h-[84px] rounded-[10px] px-9 placeholder:text-text-placeholder text-dark",
-            { "ring-danger": Boolean(error) },
-            {
-              "hover:ring-purple-light focus:ring-purple-dark ring-primary":
-                !Boolean(error),
-            },
-            { "pr-14": value },
+            classes.fieldBase,
+            { [classes.fieldInvalid]: Boolean(error) },
+            { [classes.fieldValid]: !Boolean(error) },
+            { "pr-16 brd": value },
             className
           )}
           {...props}
         />
+
         {/* clear button */}
         {value ? (
           <Button
+            tabIndex={-1}
             onClick={onClearButtonClick}
             variant={ButtonVariant.custom}
             size={ButtonSize.custom}
-            className={clsx("absolute top-0 right-0 h-full mr-6 px-2", {
-              "h-auto top-20": labelText,
+            className={clsx(classes.clearButton, {
+              "pt-[44px]": Boolean(labelText),
             })}
           >
-            <CloseIcon className="w-3 h-3 stroke-action" />
+            <CloseIcon className={classes.clearIcon} />
           </Button>
         ) : null}
+
         {/* error text */}
-        {error ? (
-          <span className="text-danger absolute -bottom-3 left-4 flex bg-white px-1">
-            {error}
-          </span>
-        ) : null}
+        {error ? <span className={classes.errorText}>{error}</span> : null}
       </div>
     );
   }

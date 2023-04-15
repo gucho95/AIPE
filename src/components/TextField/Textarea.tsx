@@ -10,6 +10,7 @@ import {
 import clsx from "clsx";
 import Button, { ButtonSize, ButtonVariant } from "../Button";
 import CloseIcon from "../Icons/Close";
+import classes from "./style.module.css";
 
 interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: string;
@@ -35,10 +36,10 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     };
 
     return (
-      <div className="relative flex flex-col">
+      <div className={classes.fieldWrapper}>
         {labelText ? (
           // fix htmlFor to work correctly
-          <label htmlFor={props.name} className="pb-3 text-2xl">
+          <label htmlFor={props.name} className={classes.fieldLabel}>
             {labelText}
           </label>
         ) : null}
@@ -52,13 +53,11 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             textareaRef.current = e;
           }}
           className={clsx(
-            "outline-none ring-2 h-[84px] rounded-[10px] px-9 py-8 placeholder:text-text-placeholder text-dark resize-none min-h-[143px] no-scrollBar w-full",
-            { "ring-danger": Boolean(error) },
-            {
-              "hover:ring-purple-light focus:ring-purple-dark ring-primary":
-                !Boolean(error),
-            },
-            { "pr-14": value },
+            "min-h-[143px] py-8 no-scrollBar resize-none",
+            classes.fieldBase,
+            { [classes.fieldInvalid]: Boolean(error) },
+            { [classes.fieldValid]: !Boolean(error) },
+            { "pr-16": Boolean(value) },
             className
           )}
           {...props}
@@ -67,22 +66,20 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {/* clear button */}
         {value ? (
           <Button
+            tabIndex={-1}
             onClick={onClearButtonClick}
             variant={ButtonVariant.custom}
             size={ButtonSize.custom}
-            className={clsx("absolute top-[38px] right-0 mr-6 px-2", {
-              "top-[82px]": labelText,
+            className={clsx(classes.clearButton, {
+              "pb-3": Boolean(labelText),
+              "pb-14": !Boolean(labelText),
             })}
           >
-            <CloseIcon className="w-3 h-3 stroke-action" />
+            <CloseIcon className={classes.clearIcon} />
           </Button>
         ) : null}
         {/* error text */}
-        {error ? (
-          <span className="text-danger absolute -bottom-2 left-4 flex bg-white px-1">
-            {error}
-          </span>
-        ) : null}
+        {error ? <span className={classes.errorText}>{error}</span> : null}
       </div>
     );
   }

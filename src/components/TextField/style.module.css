@@ -1,0 +1,31 @@
+.fieldWrapper {
+  @apply relative flex flex-col;
+}
+
+.fieldLabel {
+  @apply pb-3 text-2xl;
+}
+
+.fieldBase {
+  @apply outline-none ring-2 h-[84px] rounded-[10px] px-9 placeholder:text-text-placeholder text-dark;
+}
+
+.fieldInvalid {
+  @apply ring-danger;
+}
+
+.fieldValid {
+  @apply hover:ring-purple-light focus:ring-purple-dark ring-primary;
+}
+
+.clearButton {
+  @apply absolute top-0 right-0 h-full mr-6 px-2;
+}
+
+.clearIcon {
+  @apply w-3 h-3 stroke-action;
+}
+
+.errorText {
+  @apply text-danger absolute -bottom-3 left-4 flex bg-white px-1;
+}

@@ -1,0 +1,31 @@
+.buttonPrimary {
+  @apply bg-primary rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark;
+}
+
+.buttonDark {
+  @apply bg-dark rounded-lg truncate text-white disabled:text-primary-disabled disabled:bg-primary stroke-white;
+}
+
+.buttonOutlined {
+  @apply bg-white rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark ring-2 ring-dark disabled:ring-primary;
+}
+
+.buttonLoading {
+  @apply cursor-default text-opacity-0 selection:hidden relative;
+}
+
+.buttonEnabled {
+  @apply enabled:hover:scale-[1.02] enabled:active:scale-[0.98];
+}
+
+.buttonBase {
+  @apply tracking-[0.02em] outline-none flex items-center justify-center;
+}
+
+.spinnerWrapper {
+  @apply inset-0 absolute flex justify-center items-center;
+}
+
+.spinner {
+  @apply w-6 h-6 animate-spin;
+}

@@ -1,12 +1,12 @@
 import { ButtonHTMLAttributes, FC, ReactElement } from "react";
 import clsx from "clsx";
 import SpinnerIcon from "../Icons/Spinner";
+import classes from "./style.module.css";
 
 export enum ButtonVariant {
   primary = "primary",
   dark = "dark",
-  darkOutlined = "darkOutlined",
-  ghost = "ghost",
+  outlined = "outlined",
   custom = "custom",
 }
 
@@ -18,16 +18,10 @@ export enum ButtonSize {
 }
 
 const VariantClasses = {
-  [ButtonVariant.primary]:
-    "bg-primary rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark",
-  [ButtonVariant.dark]:
-    "bg-dark rounded-lg truncate text-white disabled:text-primary-disabled disabled:bg-primary stroke-white",
-  [ButtonVariant.darkOutlined]:
-    "bg-white rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark ring-2 ring-dark disabled:ring-primary",
-  [ButtonVariant.ghost]:
-    "text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-2 focus:ring-gray-100 ",
+  [ButtonVariant.primary]: classes.buttonPrimary,
+  [ButtonVariant.dark]: classes.buttonDark,
+  [ButtonVariant.outlined]: classes.buttonOutlined,
   [ButtonVariant.custom]: "",
-  //  add your variants here
 };
 
 const SizeClasses = {
@@ -35,7 +29,6 @@ const SizeClasses = {
   [ButtonSize.small]: "px-4 py-2.5",
   [ButtonSize.base]: " px-6 py-[18px]",
   [ButtonSize.large]: "px-8 py-4",
-  // add your variant classes here
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -60,26 +53,22 @@ const Button: FC<ButtonProps> = ({
   const finalClassName = clsx(
     variantClassName,
     sizeClassName,
-    className,
-    // hide button text and show spinner when loading is true
-    { "cursor-default text-opacity-0 selection:hidden relative": loading },
-    // apply hover/active styles when loading and disabled flags are falsy
-    { "enabled:hover:scale-[1.02] enabled:active:scale-[0.98]": !loading },
-    // default classes
-    "tracking-[0.02em] outline-none flex items-center justify-center"
+    { [classes.buttonLoading]: loading },
+    { [classes.buttonEnabled]: !loading },
+    classes.buttonBase,
+    className
   );
 
   return (
     <button {...props} className={finalClassName}>
       {/* show spinner on loading */}
       {loading ? (
-        <span className="inset-0 absolute flex justify-center items-center">
-          <SpinnerIcon className="w-6 h-6 animate-spin" />
+        <span className={classes.spinnerWrapper}>
+          <SpinnerIcon className={classes.spinner} />
         </span>
       ) : null}
       {/* show icon if provided */}
       {icon}
-      {/* spacing after icon */}
       {icon && children ? <span className="pl-4" /> : null}
       {/* button content */}
       {children}
