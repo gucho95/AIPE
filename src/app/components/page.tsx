@@ -1,6 +1,7 @@
 import Button, { ButtonVariant } from "@/components/Button";
 import RefreshIcon from "@/components/Icons/Refresh";
 import Input from "@/components/Input";
+import Textarea from "@/components/Textarea";
 
 export default function Home() {
   return (
@@ -152,18 +153,51 @@ export default function Home() {
         </section>
       </div>
       <div className="pt-4" />
-      <div className="flex space-x-3">
-        <div className="w-[300px]">
-          <Input placeholder="Макака с бананом в сша" className="w-full" />
-        </div>
-        <div className="w-[300px]">
+      <div className="grid grid-cols-3 gap-3 items-end">
+        <div>
           <Input
+            name="if1"
+            placeholder="Макака с бананом в сша"
+            className="w-full"
+          />
+        </div>
+        <div>
+          <Input
+            name="if2"
             value="Макака с бананом в сша"
             placeholder="Макака с бананом в сша"
             className="w-full"
             error="Неверно указана почта"
           />
         </div>
+        <div>
+          <Input
+            name="if3"
+            labelText="H3 Опиши принт."
+            placeholder="Макака с бананом в сша"
+            className="w-full"
+          />
+        </div>
+      </div>
+
+      <div className="pt-4" />
+      <div className="grid grid-cols-3 gap-3 items-end">
+        <Textarea
+          name="tf1"
+          placeholder="Макака с бананом в сша"
+          className="w-full"
+        />
+        <Textarea
+          name="tf2"
+          value="Макака с бананом в сша"
+          placeholder="Макака с бананом в сша"
+          error="Неверно указана почта"
+        />
+        <Textarea
+          name="tf3"
+          labelText="H3 Опиши принт."
+          placeholder="Макака с бананом в сша"
+        />
       </div>
     </main>
   );
