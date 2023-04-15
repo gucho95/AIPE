@@ -1,5 +1,6 @@
 import Button, { ButtonVariant } from "@/components/Button";
 import RefreshIcon from "@/components/Icons/Refresh";
+import Input from "@/components/Input";
 
 export default function Home() {
   return (
@@ -149,6 +150,20 @@ export default function Home() {
             />
           </div>
         </section>
+      </div>
+      <div className="pt-4" />
+      <div className="flex space-x-3">
+        <div className="w-[300px]">
+          <Input placeholder="Макака с бананом в сша" className="w-full" />
+        </div>
+        <div className="w-[300px]">
+          <Input
+            value="Макака с бананом в сша"
+            placeholder="Макака с бананом в сша"
+            className="w-full"
+            error="Неверно указана почта"
+          />
+        </div>
       </div>
     </main>
   );

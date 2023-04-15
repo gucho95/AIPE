@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC, ReactElement, ReactNode } from "react";
+import { ButtonHTMLAttributes, FC, ReactElement } from "react";
 import clsx from "clsx";
 import SpinnerIcon from "../Icons/Spinner";
 
@@ -19,11 +19,11 @@ export enum ButtonSize {
 
 const VariantClasses = {
   [ButtonVariant.primary]:
-    "bg-primary rounded-lg truncate text-dark disabled:text-primaryDisabled stroke-dark",
+    "bg-primary rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark",
   [ButtonVariant.dark]:
-    "bg-dark rounded-lg truncate text-white disabled:text-primaryDisabled disabled:bg-primary stroke-white",
+    "bg-dark rounded-lg truncate text-white disabled:text-primary-disabled disabled:bg-primary stroke-white",
   [ButtonVariant.darkOutlined]:
-    "bg-white rounded-lg truncate text-dark disabled:text-primaryDisabled stroke-dark ring-2 ring-dark disabled:ring-primary",
+    "bg-white rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark ring-2 ring-dark disabled:ring-primary",
   [ButtonVariant.ghost]:
     "text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-2 focus:ring-gray-100 ",
   [ButtonVariant.custom]: "",
@@ -62,11 +62,11 @@ const Button: FC<ButtonProps> = ({
     sizeClassName,
     className,
     // hide button text and show spinner when loading is true
-    { "cursor-default text-opacity-0": loading },
-    // disable hover/active styles when loading
+    { "cursor-default text-opacity-0 selection:hidden relative": loading },
+    // apply hover/active styles when loading and disabled flags are falsy
     { "enabled:hover:scale-[1.02] enabled:active:scale-[0.98]": !loading },
     // default classes
-    "relative tracking-[0.02em] outline-none"
+    "tracking-[0.02em] outline-none flex items-center justify-center"
   );
 
   return (
