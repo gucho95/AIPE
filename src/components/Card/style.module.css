@@ -1,0 +1,11 @@
+.textCard {
+  @apply px-7 py-4 bg-light-alternate rounded-xl border border-white border-solid shadow-textCard;
+}
+
+.textCardAction {
+  @apply text-danger font-secondary flex items-center;
+}
+
+.textCardActionIcon {
+  @apply ml-2 stroke-current w-4 font-medium;
+}

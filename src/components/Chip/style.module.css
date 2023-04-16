@@ -7,7 +7,7 @@
 }
 
 .chipDark {
-  @apply bg-chip-dark text-white font-secondary rounded-3xl text-base leading-4;
+  @apply bg-chip-dark text-light font-secondary rounded-3xl text-base leading-4;
 }
 
 .chipYellow {
@@ -15,7 +15,7 @@
 }
 
 .chipBlue {
-  @apply bg-chip-blue text-white font-secondary rounded-md text-lg leading-[18px];
+  @apply bg-chip-blue text-light font-secondary rounded-md text-lg leading-[18px];
 }
 
 .chipSmallSize {

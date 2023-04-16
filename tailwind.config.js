@@ -10,11 +10,18 @@ module.exports = {
       primary: "var(--font-primary)",
       secondary: "var(--font-secondary)",
     },
+    boxShadow: {
+      textCard: "0px 4px 45px rgba(0, 0, 0, 0.1)",
+    },
     extend: {
       colors: {
         primary: {
           DEFAULT: "#E6E6E6",
           disabled: "#838383",
+        },
+        light: {
+          DEFAULT: "#FFFFFF",
+          alternate: "#FAFAFA",
         },
         dark: { DEFAULT: "#222222", alternate: "#29281B" },
         purple: {

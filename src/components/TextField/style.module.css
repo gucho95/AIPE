@@ -27,5 +27,5 @@
 }
 
 .errorText {
-  @apply text-danger absolute -bottom-3 left-4 flex bg-white px-1 whitespace-nowrap;
+  @apply text-danger absolute -bottom-3 left-4 flex bg-light px-1 whitespace-nowrap;
 }

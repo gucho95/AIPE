@@ -1,4 +1,5 @@
 import Button, { ButtonVariant } from "@/components/Button";
+import TextCard from "@/components/Card/TextCard";
 import Chip, { ChipSize, ChipVariant } from "@/components/Chip";
 import RefreshIcon from "@/components/Icons/Refresh";
 import Input from "@/components/TextField/Input";
@@ -231,14 +232,14 @@ export default function Home() {
 
       <Paragraph className="mt-4">
         <Text variant={TextVariant.body3}>
-          SF Regular 19 | В Москве и 60 других крупных городах России вы
+          SF Regular 17 | В Москве и 60 других крупных городах России вы
           получите свой заказ уже через 7 дней после оплаты! Более подробную
           информацию об условиях доставки в ваш город можно найти здесь.
         </Text>
       </Paragraph>
       <Paragraph className="mt-4">
         <Text variant={TextVariant.body4}>
-          SF Regular 19 | В Москве и 60 других крупных городах России вы
+          SF Regular 16 | В Москве и 60 других крупных городах России вы
           получите свой заказ уже через 7 дней после оплаты! Более подробную
           информацию об условиях доставки в ваш город можно найти здесь.
         </Text>
@@ -275,6 +276,33 @@ export default function Home() {
         <Chip variant={ChipVariant.blue} size={ChipSize.base}>
           NFT
         </Chip>
+      </div>
+
+      <div className="pt-8" />
+      <h2 className="text-3xl">Card</h2>
+      <div className="pt-4" />
+      <hr />
+      <div className="pt-4" />
+      <div className="flex items-start space-x-4">
+        <TextCard
+          title="О том что мы делаем"
+          description="Задача организации, в особенности
+          же реализация намеченных плановых
+          заданий влечет за собой процесс
+          внедрения и модернизации
+          соответствующий условий активизации."
+          actionText="Подробнее"
+          className="w-[355px]"
+        />
+
+        <TextCard
+          description="Задача организации, в особенности
+          же реализация намеченных плановых
+          заданий влечет за собой процесс
+          внедрения и модернизации
+          соответствующий условий активизации."
+          className="w-[355px]"
+        />
       </div>
     </main>
   );

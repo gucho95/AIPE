@@ -3,11 +3,11 @@
 }
 
 .buttonDark {
-  @apply bg-dark rounded-lg truncate text-white disabled:text-primary-disabled disabled:bg-primary stroke-white;
+  @apply bg-dark rounded-lg truncate text-light disabled:text-primary-disabled disabled:bg-primary stroke-light;
 }
 
 .buttonOutlined {
-  @apply bg-white rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark ring-2 ring-dark disabled:ring-primary;
+  @apply bg-light rounded-lg truncate text-dark disabled:text-primary-disabled stroke-dark ring-2 ring-dark disabled:ring-primary;
 }
 
 .buttonLoading {
