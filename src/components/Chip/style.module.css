@@ -1,0 +1,27 @@
+.chip {
+  @apply truncate;
+}
+
+.chipLight {
+  @apply bg-chip-light text-black/70 font-primary rounded-2xl text-[11px] leading-[11px];
+}
+
+.chipDark {
+  @apply bg-chip-dark text-white font-secondary rounded-3xl text-base leading-4;
+}
+
+.chipYellow {
+  @apply bg-chip-yellow text-dark-alternate font-secondary rounded-md text-lg leading-[18px];
+}
+
+.chipBlue {
+  @apply bg-chip-blue text-white font-secondary rounded-md text-lg leading-[18px];
+}
+
+.chipSmallSize {
+  @apply py-1 px-2;
+}
+
+.chipBaseSize {
+  @apply py-[6px] px-4;
+}

@@ -16,7 +16,7 @@ module.exports = {
           DEFAULT: "#E6E6E6",
           disabled: "#838383",
         },
-        dark: "#222222",
+        dark: { DEFAULT: "#222222", alternate: "#29281B" },
         purple: {
           light: "#D9C8EF",
           dark: "#9F57FC",
@@ -26,6 +26,12 @@ module.exports = {
         },
         action: "#C5C5C5",
         danger: "#FF4E6E",
+        chip: {
+          light: "#E8FFCB",
+          dark: "#373737",
+          yellow: "rgba(255, 232, 23, 0.7)",
+          blue: "rgba(44, 90, 255, 0.7)",
+        },
       },
       fontSize: {
         h2: ["34px", { letterSpacing: "0.02em", lineHeight: "124%" }],

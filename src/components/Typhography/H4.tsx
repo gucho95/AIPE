@@ -2,7 +2,7 @@ import { FC, HTMLAttributes } from "react";
 import clsx from "clsx";
 import classes from "./style.module.css";
 
-interface H4Props extends HTMLAttributes<HTMLHeadElement> {}
+interface H4Props extends HTMLAttributes<HTMLHeadingElement> {}
 
 const H4: FC<H4Props> = ({ children, className, ...props }) => {
   return (

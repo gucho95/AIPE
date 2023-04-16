@@ -1,4 +1,5 @@
 import Button, { ButtonVariant } from "@/components/Button";
+import Chip, { ChipSize, ChipVariant } from "@/components/Chip";
 import RefreshIcon from "@/components/Icons/Refresh";
 import Input from "@/components/TextField/Input";
 import Textarea from "@/components/TextField/Textarea";
@@ -242,6 +243,39 @@ export default function Home() {
           информацию об условиях доставки в ваш город можно найти здесь.
         </Text>
       </Paragraph>
+
+      <div className="pt-8" />
+      <h2 className="text-3xl">Chip</h2>
+      <div className="pt-4" />
+      <hr />
+      <div className="pt-4" />
+      <div className="flex items-start space-x-4">
+        <Chip variant={ChipVariant.light} size={ChipSize.small}>
+          СКОРО
+        </Chip>
+
+        <Chip variant={ChipVariant.light} size={ChipSize.base}>
+          СКОРО
+        </Chip>
+        <Chip variant={ChipVariant.dark} size={ChipSize.small}>
+          Принято в производство
+        </Chip>
+        <Chip variant={ChipVariant.dark} size={ChipSize.base}>
+          Принято в производство
+        </Chip>
+        <Chip variant={ChipVariant.yellow} size={ChipSize.small}>
+          ПРОДАНО
+        </Chip>
+        <Chip variant={ChipVariant.yellow} size={ChipSize.base}>
+          ПРОДАНО
+        </Chip>
+        <Chip variant={ChipVariant.blue} size={ChipSize.small}>
+          NFT
+        </Chip>
+        <Chip variant={ChipVariant.blue} size={ChipSize.base}>
+          NFT
+        </Chip>
+      </div>
     </main>
   );
 }

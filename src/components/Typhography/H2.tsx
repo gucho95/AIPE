@@ -2,7 +2,7 @@ import { FC, HTMLAttributes } from "react";
 import clsx from "clsx";
 import classes from "./style.module.css";
 
-interface H2Props extends HTMLAttributes<HTMLHeadElement> {}
+interface H2Props extends HTMLAttributes<HTMLHeadingElement> {}
 
 const H2: FC<H2Props> = ({ children, className, ...props }) => {
   return (
