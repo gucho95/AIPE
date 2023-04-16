@@ -1,0 +1,31 @@
+.h2 {
+  @apply text-h2;
+}
+
+.h3 {
+  @apply text-h3;
+}
+
+.h4 {
+  @apply text-h4;
+}
+
+.paragraph {
+  @apply text-dark;
+}
+
+.textBody1 {
+  @apply text-body1 font-secondary;
+}
+
+.textBody2 {
+  @apply text-body2 font-primary;
+}
+
+.textBody3 {
+  @apply text-body3 font-secondary;
+}
+
+.textBody4 {
+  @apply text-body4 font-secondary;
+}

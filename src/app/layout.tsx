@@ -1,12 +1,34 @@
 import "./globals.css";
 import clsx from "clsx";
 import { Prosto_One } from "next/font/google";
+import localFont from "next/font/local";
 
-const prostoOne = Prosto_One({
+const primaryFont = Prosto_One({
   subsets: ["cyrillic"],
   weight: "400",
-  variable: "--font-prostoOne",
+  variable: "--font-primary",
   fallback: ["cursive"],
+});
+
+const secondaryFont = localFont({
+  variable: "--font-secondary",
+  src: [
+    {
+      path: "../../public/fonts/sfprodisplayregular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/sfprodisplaymedium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/sfprodisplaybold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata = {
@@ -21,7 +43,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={clsx(prostoOne.variable, "font-body")}>{children}</body>
+      <body
+        className={clsx(
+          primaryFont.variable,
+          secondaryFont.variable,
+          "font-primary"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

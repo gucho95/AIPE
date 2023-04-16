@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply font-body;
-}
-
 .brd {
   border: 1px solid red;
 }

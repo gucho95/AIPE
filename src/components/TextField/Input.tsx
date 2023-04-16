@@ -55,7 +55,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             classes.fieldBase,
             { [classes.fieldInvalid]: Boolean(error) },
             { [classes.fieldValid]: !Boolean(error) },
-            { "pr-16 brd": value },
+            { "pr-16": value },
             className
           )}
           {...props}

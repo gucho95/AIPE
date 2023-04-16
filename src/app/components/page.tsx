@@ -2,11 +2,18 @@ import Button, { ButtonVariant } from "@/components/Button";
 import RefreshIcon from "@/components/Icons/Refresh";
 import Input from "@/components/TextField/Input";
 import Textarea from "@/components/TextField/Textarea";
+import H2 from "@/components/Typhography/H2";
+import H3 from "@/components/Typhography/H3";
+import H4 from "@/components/Typhography/H4";
+import Paragraph from "@/components/Typhography/Paragraph";
+import Text, { TextVariant } from "@/components/Typhography/Text";
 
 export default function Home() {
   return (
     <main className="p-6">
       <div className="grid gap-6">
+        <h2 className="text-3xl">Button</h2>
+        <hr />
         <section className="grid gap-2">
           <div className="flex space-x-2 w-full">
             <Button variant={ButtonVariant.primary}>Попробовать снова</Button>
@@ -150,7 +157,10 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <div className="pt-8" />
+      <h2 className="text-3xl">Text Field</h2>
       <div className="pt-4" />
+      <hr />
       <div className="grid grid-cols-3 gap-3 items-end">
         <div>
           <Input
@@ -162,7 +172,7 @@ export default function Home() {
         <div>
           <Input
             name="if2"
-            value="Макака с бананом в сша"
+            defaultValue="Макака с бананом в сша"
             placeholder="Макака с бананом в сша"
             className="w-full"
             error="Неверно указана почта"
@@ -177,7 +187,6 @@ export default function Home() {
           />
         </div>
       </div>
-
       <div className="pt-4" />
       <div className="grid grid-cols-3 gap-3 items-end">
         <Textarea
@@ -187,7 +196,7 @@ export default function Home() {
         />
         <Textarea
           name="tf2"
-          value="Макака с бананом в сша"
+          defaultValue="Макака с бананом в сша"
           placeholder="Макака с бананом в сша"
           error="Неверно указана почта"
         />
@@ -197,6 +206,42 @@ export default function Home() {
           placeholder="Макака с бананом в сша"
         />
       </div>
+      <div className="pt-8" />
+      <h2 className="text-3xl">Typhography</h2>
+      <div className="pt-4" />
+      <hr />
+      <div className="pt-4" />
+      <H2>h2- Макака с бананом в сша</H2>
+      <H3>h3- Макака с бананом в сша</H3>
+      <H4>h4- Макака с бананом в сша</H4>
+      <Paragraph>
+        <Text variant={TextVariant.body2}>
+          Prosto One Regular 17 | Макака с бананом в сша с банданой на голове в
+          уникальном стиле
+        </Text>
+      </Paragraph>
+      <Paragraph className="mt-4">
+        <Text variant={TextVariant.body1}>
+          SF Regular 19 | В Москве и 60 других крупных городах России вы
+          получите свой заказ уже через 7 дней после оплаты! Более подробную
+          информацию об условиях доставки в ваш город можно найти здесь.
+        </Text>
+      </Paragraph>
+
+      <Paragraph className="mt-4">
+        <Text variant={TextVariant.body3}>
+          SF Regular 19 | В Москве и 60 других крупных городах России вы
+          получите свой заказ уже через 7 дней после оплаты! Более подробную
+          информацию об условиях доставки в ваш город можно найти здесь.
+        </Text>
+      </Paragraph>
+      <Paragraph className="mt-4">
+        <Text variant={TextVariant.body4}>
+          SF Regular 19 | В Москве и 60 других крупных городах России вы
+          получите свой заказ уже через 7 дней после оплаты! Более подробную
+          информацию об условиях доставки в ваш город можно найти здесь.
+        </Text>
+      </Paragraph>
     </main>
   );
 }
