@@ -5,7 +5,7 @@ import classes from "./style.module.css";
 import Image from "next/image";
 import H3 from "../Typhography/H3";
 import Spacing from "../Spacing";
-import ArrowUpLong from "../Icons/ArrowUpLong";
+import ArrowUpLongIcon from "../Icons/ArrowUpLong";
 
 interface ImageCardProps extends HTMLAttributes<HTMLDivElement> {
   title?: string;
@@ -70,7 +70,7 @@ const ImageCard: FC<ImageCardProps> = ({
               "group-hover:hidden"
             )}
           >
-            <ArrowUpLong className={classes.imageCardArrow} />
+            <ArrowUpLongIcon className={classes.imageCardArrow} />
           </span>
           <Spacing className="pt-6" />
         </div>

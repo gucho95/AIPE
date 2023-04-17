@@ -9,15 +9,16 @@ module.exports = {
     fontFamily: {
       primary: "var(--font-primary)",
       secondary: "var(--font-secondary)",
+      alternate: "var(--font-alternate)",
     },
-    boxShadow: {
-      textCard: "0px 4px 45px rgba(0, 0, 0, 0.1)",
-    },
+
     extend: {
       colors: {
         primary: {
           DEFAULT: "#E6E6E6",
           disabled: "#838383",
+          alpha: "#1D1D1FB2",
+          beta: "#86868B",
         },
         light: {
           DEFAULT: "#FFFFFF",
@@ -48,6 +49,9 @@ module.exports = {
         body2: ["17px", { letterSpacing: "0.02em", lineHeight: "21px" }],
         body3: ["17px", { letterSpacing: "0.02em", lineHeight: "130%" }],
         body4: ["16px", { letterSpacing: "0.02em", lineHeight: "19px" }],
+      },
+      boxShadow: {
+        textCard: "0px 4px 45px rgba(0, 0, 0, 0.1)",
       },
     },
   },

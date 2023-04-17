@@ -16,4 +16,22 @@ const ArrowRightIcon = (props: SVGProps<SVGSVGElement>): ReactElement => (
   </svg>
 );
 
+export const ArrowRightBigIcon = (
+  props: SVGProps<SVGSVGElement>
+): ReactElement => (
+  <svg
+    viewBox="0 0 15 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M14 7L1 7M14 7L8.15 1M14 7L8.15 13"
+      stroke-width="1.3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
 export default ArrowRightIcon;

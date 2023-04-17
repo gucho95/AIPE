@@ -1,6 +1,6 @@
 import { ReactElement, SVGProps } from "react";
 
-const ArrowUpLong = (props: SVGProps<SVGSVGElement>): ReactElement => (
+const ArrowUpLongIcon = (props: SVGProps<SVGSVGElement>): ReactElement => (
   <svg
     viewBox="0 0 18 101"
     fill="none"
@@ -17,4 +17,4 @@ const ArrowUpLong = (props: SVGProps<SVGSVGElement>): ReactElement => (
   </svg>
 );
 
-export default ArrowUpLong;
+export default ArrowUpLongIcon;
