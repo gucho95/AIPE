@@ -12,7 +12,6 @@
 }
 
 /* image card styles */
-
 .imageCard {
   @apply relative h-[796px] max-w-full rounded-[22px] drop-shadow-[0px_-4px_30px_white] overflow-hidden;
 }
@@ -25,10 +24,22 @@
   @apply absolute inset-0 flex justify-end flex-col;
 }
 
+.imageCardTitle {
+  @apply text-light pl-11 py-[11px] pr-5 inline-block rounded-[10px] backdrop-blur-lg  bg-[rgba(29,29,31,0.1)] max-w-full truncate;
+}
+
 .imageCardDescription {
   @apply text-light group-hover:hidden line-clamp-5;
 }
 
 .imageCardBlurBlock {
   @apply absolute bottom-0 left-0 h-32 w-full  bg-dark/10 backdrop-blur-sm;
+}
+
+.imageCardArrowWrapper {
+  @apply absolute bottom-0 left-[38px]  overflow-hidden transition-all ease-linear;
+}
+
+.imageCardArrow {
+  @apply stroke-white h-[104px] flex-shrink-0;
 }

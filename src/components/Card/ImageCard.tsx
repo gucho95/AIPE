@@ -1,8 +1,6 @@
 import { FC, ReactNode, HTMLAttributes } from "react";
 import clsx from "clsx";
 import Text, { TextVariant } from "../Typhography/Text";
-import Button, { ButtonSize, ButtonVariant } from "../Button";
-import ArrowRightIcon from "../Icons/ArrowRight";
 import classes from "./style.module.css";
 import Image from "next/image";
 import H3 from "../Typhography/H3";
@@ -58,11 +56,21 @@ const ImageCard: FC<ImageCardProps> = ({
 
       <div className={classes.imageCardContent}>
         <div className="px-5 group-hover:px-0">
-          <H3 className="text-light pl-11 py-[11px] pr-5 inline-block rounded-[10px] backdrop-blur-lg  bg-[rgba(29,29,31,0.1)] group-hover:bg-transparent group-hover:backdrop-blur-0 max-w-full truncate">
+          <H3
+            className={clsx(
+              classes.imageCardTitle,
+              "group-hover:bg-transparent group-hover:backdrop-blur-0"
+            )}
+          >
             {title}
           </H3>
-          <span className="absolute bottom-0 left-[38px]  overflow-hidden transition-all ease-linear group-hover:hidden">
-            <ArrowUpLong className="stroke-white h-24 flex-shrink-0" />
+          <span
+            className={clsx(
+              classes.imageCardArrowWrapper,
+              "group-hover:hidden"
+            )}
+          >
+            <ArrowUpLong className={classes.imageCardArrow} />
           </span>
           <Spacing className="pt-6" />
         </div>
