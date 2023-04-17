@@ -1,4 +1,5 @@
 import Button, { ButtonVariant } from "@/components/Button";
+import ImageCard, { mockDataImageCard } from "@/components/Card/ImageCard";
 import TextCard from "@/components/Card/TextCard";
 import Chip, { ChipSize, ChipVariant } from "@/components/Chip";
 import RefreshIcon from "@/components/Icons/Refresh";
@@ -303,6 +304,11 @@ export default function Home() {
           соответствующий условий активизации."
           className="w-[355px]"
         />
+      </div>
+      <div className="grid grid-cols-3 gap-x-4">
+        <ImageCard {...mockDataImageCard[0]} />
+        <ImageCard {...mockDataImageCard[1]} />
+        <ImageCard {...mockDataImageCard[2]} />
       </div>
     </main>
   );

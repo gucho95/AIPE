@@ -1,3 +1,4 @@
+/* text card styles */
 .textCard {
   @apply px-7 py-4 bg-light-alternate rounded-xl border border-white border-solid shadow-textCard;
 }
@@ -8,4 +9,26 @@
 
 .textCardActionIcon {
   @apply ml-2 stroke-current w-4 font-medium;
+}
+
+/* image card styles */
+
+.imageCard {
+  @apply relative h-[796px] max-w-full rounded-[22px] drop-shadow-[0px_-4px_30px_white] overflow-hidden;
+}
+
+.imageCard img {
+  @apply object-cover object-center;
+}
+
+.imageCardContent {
+  @apply absolute inset-0 flex justify-end flex-col;
+}
+
+.imageCardDescription {
+  @apply text-light group-hover:hidden line-clamp-5;
+}
+
+.imageCardBlurBlock {
+  @apply absolute bottom-0 left-0 h-32 w-full  bg-dark/10 backdrop-blur-sm;
 }

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply max-w-[1440px] mx-auto;
+}
+
 .brd {
   border: 1px solid red;
 }
