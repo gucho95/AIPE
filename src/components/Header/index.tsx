@@ -1,28 +1,40 @@
-import { FC, Fragment, HTMLAttributes } from "react";
+"use client";
+import { FC, Fragment, HTMLAttributes, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import clsx from "clsx";
+import { Option } from "@/constants/types";
 import classes from "./style.module.css";
 import Text from "../Typhography/Text";
 import ArrowDownSmallIcon from "../Icons/ArrowDownSmall";
 import Spacing from "../Spacing";
-import ArrowRightIcon, { ArrowRightBigIcon } from "../Icons/ArrowRight";
-import Link from "next/link";
-import Image from "next/image";
+import { ArrowRightBigIcon } from "../Icons/ArrowRight";
+import Dropdown from "../Dropdown";
+import { GENDER_OPTIONS } from "@/constants/system";
 
 interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
 const Header: FC<HeaderProps> = ({ className, ...props }) => {
+  const [gender, setGender] = useState<Option>(GENDER_OPTIONS[0]);
+
   return (
     <Fragment>
       <div className="grid grid-cols-3 items-center font-alternate py-4 bg-light px-16">
         <div className="flex">
-          <Text className="text-primary-alpha/70 font-medium">
-            Пол моделей:
-          </Text>
-          <Spacing className="pl-2" />
-          <Text className="text-primary-alpha/100 font-alternate flex font-medium">
-            Все&nbsp;
-            <ArrowDownSmallIcon className="stroke-current w-3 relative top-[3px]" />
-          </Text>
+          <Dropdown
+            options={GENDER_OPTIONS}
+            menuClassName="w-[200px]"
+            onOptionSelect={setGender}
+          >
+            <Text className="text-primary-alpha/70 font-medium">
+              Пол моделей:
+            </Text>
+            <Spacing className="pl-2" />
+            <Text className="text-primary-alpha/100 font-alternate flex font-medium">
+              {gender.label}&nbsp;
+              <ArrowDownSmallIcon className="stroke-current w-3 relative top-[3px]" />
+            </Text>
+          </Dropdown>
         </div>
         <div className="flex justify-center">
           <Link href="#">

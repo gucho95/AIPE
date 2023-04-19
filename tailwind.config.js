@@ -52,6 +52,7 @@ module.exports = {
       },
       boxShadow: {
         textCard: "0px 4px 45px rgba(0, 0, 0, 0.1)",
+        dropDown: "0px 4px 45px rgba(0, 0, 0, 0.1)",
       },
     },
   },

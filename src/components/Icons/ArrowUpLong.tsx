@@ -9,10 +9,10 @@ const ArrowUpLongIcon = (props: SVGProps<SVGSVGElement>): ReactElement => (
   >
     <path
       d="M9 2L9 101M9 2L2 8.75M9 2L16 8.75"
-      stroke-opacity="0.9"
-      stroke-width="2.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeOpacity="0.9"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

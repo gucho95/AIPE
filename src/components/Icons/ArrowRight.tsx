@@ -9,9 +9,9 @@ const ArrowRightIcon = (props: SVGProps<SVGSVGElement>): ReactElement => (
   >
     <path
       d="M15 6L0.999999 6M15 6L9.75 1M15 6L9.75 11"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -27,9 +27,9 @@ export const ArrowRightBigIcon = (
   >
     <path
       d="M14 7L1 7M14 7L8.15 1M14 7L8.15 13"
-      stroke-width="1.3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

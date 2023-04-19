@@ -36,6 +36,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   loading?: boolean;
   icon?: ReactElement;
+  hoverAnimationEnabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -45,6 +46,7 @@ const Button: FC<ButtonProps> = ({
   className,
   loading,
   icon,
+  hoverAnimationEnabled = true,
   ...props
 }) => {
   const variantClassName = VariantClasses[variant];
@@ -54,7 +56,7 @@ const Button: FC<ButtonProps> = ({
     variantClassName,
     sizeClassName,
     { [classes.buttonLoading]: loading },
-    { [classes.buttonEnabled]: !loading },
+    { [classes.buttonEnabled]: !loading && hoverAnimationEnabled },
     classes.buttonBase,
     className
   );

@@ -1,0 +1,15 @@
+.dropdown {
+  @apply relative inline-block;
+}
+
+.dropdownMenu {
+  @apply text-dark rounded-xl  backdrop-blur-xl font-secondary bg-primary shadow-dropDown border-white border-opacity-30 absolute z-[9999999] left-full -ml-12  mt-2;
+}
+
+.dropdownMenuItem {
+  @apply px-6 py-4 hover:bg-white hover:bg-opacity-10 hover:cursor-pointer;
+}
+
+.dropdownDivider {
+  @apply border-b border-white border-opacity-30;
+}
