@@ -3,6 +3,7 @@ import "./globals.css";
 import clsx from "clsx";
 import { Prosto_One, Commissioner } from "next/font/google";
 import localFont from "next/font/local";
+import Footer from "@/components/Footer";
 
 const primaryFont = Prosto_One({
   subsets: ["cyrillic"],
@@ -60,7 +61,8 @@ export default function RootLayout({
         )}
       >
         <Header />
-        {children}
+        <main className="min-h-screen px-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );

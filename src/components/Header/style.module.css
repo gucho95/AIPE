@@ -1,3 +1,7 @@
+.quickLinks {
+  @apply grid grid-cols-3 items-center font-alternate py-4 bg-light px-16 text-[15px];
+}
+
 .header {
-  @apply px-16 sticky top-0 bg-light z-50 shadow-sm grid grid-cols-3 pt-8 pb-6 items-center;
+  @apply px-16 sticky top-0 bg-light z-50 grid grid-cols-3 pt-8 pb-6 items-center font-alternate;
 }

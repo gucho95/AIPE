@@ -1,0 +1,15 @@
+.footer {
+  @apply mx-16 py-32 border-t border-[#1D1D1F]/5 border-opacity-5 flex justify-between;
+}
+
+.navigationLinks {
+  @apply flex space-x-12;
+}
+
+.navigationBlock {
+  @apply flex flex-col space-y-2;
+}
+
+.socials {
+  @apply flex flex-col;
+}
